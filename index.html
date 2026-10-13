@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Build a clearer plan for your money with Bono. Get practical tips and a simple plan made for your goals.">
+  <title>Bono | Make a Plan for Your Money</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#" aria-label="Bono home">
+        <img src="images/logo.svg" alt="Bono logo">
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#benefits">Why Bono</a>
+        <a href="#how-it-works">How It Works</a>
+        <a class="nav-cta" href="#get-started">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">A SMARTER WAY FORWARD</p>
+          <h1>Make a plan for the life you want.</h1>
+          <p class="hero-intro">Big goals feel easier when you have a clear next step. Bono helps you get organized, understand your options, and move forward with confidence.</p>
+          <a class="button button-light" href="#get-started">Build Your Plan <span aria-hidden="true">→</span></a>
+          <div class="trust-note"><span class="check-mark">✓</span> Simple steps. Helpful guidance. Your goals.</div>
+        </div>
+        <aside class="signup-card" id="get-started">
+          <p class="card-kicker">LET'S GET STARTED</p>
+          <h2>Take the first step</h2>
+          <p class="card-description">Tell us a little about yourself to receive practical tips and updates.</p>
+          <form id="signup-form">
+            <label for="full-name">Your name</label>
+            <input id="full-name" name="full-name" type="text" placeholder="Enter your name" autocomplete="name" required>
+
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+
+            <label for="goal">What's your main goal?</label>
+            <select id="goal" name="goal" required>
+              <option value="" selected disabled>Choose a goal</option>
+              <option>Build a budget</option>
+              <option>Save for something important</option>
+              <option>Learn about money</option>
+              <option>Plan for the future</option>
+            </select>
+
+            <button class="button button-primary" type="submit">Get My Starter Guide <span aria-hidden="true">→</span></button>
+            <p class="form-note">This demo form does not send or store your information.</p>
+            <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section class="benefits section" id="benefits">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">YOUR GOALS, YOUR PACE</p>
+          <h2>Make money feel less confusing.</h2>
+          <p>You don't need to have everything figured out. Start with what matters to you and take it one step at a time.</p>
+        </div>
+        <div class="benefit-grid">
+          <article class="benefit">
+            <div class="benefit-icon" aria-hidden="true">◎</div>
+            <h3>Get clear</h3>
+            <p>Organize your priorities and see what you want to work toward first.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon" aria-hidden="true">↗</div>
+            <h3>Make progress</h3>
+            <p>Turn a big goal into smaller steps that feel possible to manage.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-icon" aria-hidden="true">✦</div>
+            <h3>Keep learning</h3>
+            <p>Build confidence with straightforward tips and useful reminders.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how section" id="how-it-works">
+      <div class="container how-layout">
+        <div>
+          <p class="eyebrow">A SIMPLE START</p>
+          <h2>Small steps can lead to big changes.</h2>
+          <p>Start with one goal. Make a plan that fits your life. Check your progress as you go. Bono is designed to help the process feel more approachable.</p>
+        </div>
+        <ol class="steps">
+          <li><span>01</span><div><h3>Choose your focus</h3><p>Pick one goal you want to work on.</p></div></li>
+          <li><span>02</span><div><h3>Find your next step</h3><p>Use simple guidance to decide where to begin.</p></div></li>
+          <li><span>03</span><div><h3>Keep moving forward</h3><p>Build a habit of checking in and adjusting your plan.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container final-cta-inner">
+        <div><p class="eyebrow">START WHERE YOU ARE</p><h2>Your next step starts today.</h2></div>
+        <a class="button button-light" href="#get-started">Get Started <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#" aria-label="Bono home"><img src="images/logo.svg" alt="Bono logo"></a>
+      <p>© <span id="year"></span> Bono. A practice project for learning HTML and CSS.</p>
+      <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Back to top ↑</a>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("signup-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("form-message").textContent =
+        "Thanks! Your demo form is complete. No information was sent or saved.";
+    });
+  </script>
+</body>
+</html>
